@@ -1,5 +1,4 @@
-//Fibonacci series in java
-
+// Fibonacci series in java 
 public class Main
 {
 	public static void main(String[] args) {
@@ -15,3 +14,44 @@ public class Main
 		
 	}
 }
+------------------------------------------------------------------------------------------------
+// prime number
+public class Main
+{
+	public static void main(String[] args) {
+	    int num = 7, count = 0;
+	    
+	    for(int i = 2; i <=num; i++){
+	        if(num % 2 == 0){
+	            count++;
+	        }
+	    }
+
+	    if(count > 0) {
+	        System.out.println(num + " not prime");
+	    }else {
+	        System.out.println(num + " prime");
+	    }
+	}
+}
+------------------------------------------------------------------------------------------------
+// palindrome number, reverse number logic
+public class Main
+{
+	public static void main(String[] args) {
+	    int num = 121, temp = num, rem = 0, rev = 0;
+	    
+	   while(temp != 0) {
+	       rem = temp % 10;
+	       rev = rem + rev * 10; 
+	       temp = temp /10;
+	   }
+	    
+	    if(rev == num) {
+	        System.out.println("palindrome");
+	    }else {
+	        System.out.println("not palindrome");
+	    }
+	}
+}
+------------------------------------------------------------------------------------------------
