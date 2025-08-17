@@ -55,3 +55,73 @@ public class Main
 	}
 }
 ------------------------------------------------------------------------------------------------
+// Armstrong Number 
+public class Main
+{
+	public static void main(String[] args) {
+		int no = 153;
+		int temp = no;
+		int rem, rev, arm = 0;
+		while(temp != 0) {
+		    rem = temp % 10;
+		    arm = arm + ( rem * rem * rem);
+		    temp = temp / 10;
+		}
+		
+		if(arm == no) {
+		    System.out.println(" no. is armstrong.");
+		}else {
+		    System.out.println(" no. is not armstrong.");
+		}
+	}
+}
+
+// if number is more than three digit then following logic is here
+
+public class Main
+{
+    public static int powerOfNumber(int num) {
+        int count = 0;
+        while(num != 0) {
+            num = num / 10;
+            count++;
+        }
+        return count;
+    }
+    
+    public static int productOfNumber(int rem, int count) {
+        int product = 1;
+        for(int i = 1; i <= count ; i++) {
+            product = product * rem;
+        }
+        return product;
+    }
+	public static void main(String[] args) {
+		int num = 153, temp = num, rem, arm = 0;
+		int count = powerOfNumber(num);
+// 		System.out.println(powerOfNumber(num));
+		while(temp != 0) {
+            rem = temp % 10;
+            arm = arm + productOfNumber(rem, count);
+// System.out.println(productOfNumber(rem, count));
+            temp = temp / 10;
+		}
+		if(arm == num) {
+		    System.out.println(" no. is armstrong.");
+		}else {
+		    System.out.println(" no. is not armstrong.");
+		}
+	}
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Factorial Program 
+public class Main
+{
+	public static void main(String[] args) {
+		int num = 5, fact = 1;
+        for(int i = 1; i <=num; i++) {
+            fact = fact * i;
+        }
+        System.out.println("factorial of number is : "+ fact);
+	}
+}
