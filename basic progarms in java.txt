@@ -125,3 +125,86 @@ public class Main
         System.out.println("factorial of number is : "+ fact);
 	}
 }
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// reverse number 
+public class Main
+{
+	public static void main(String[] args) {
+	   int num = 123, revNum = 0;
+	   int temp = num, rem;
+	   while(temp != 0) {
+	       rem = temp % 10;
+	       revNum = rem + (revNum * 10);
+	       temp = temp / 10;
+	   }
+	   System.out.println(revNum);
+	}
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// reverse string
+public class Main
+{
+	public static void main(String[] args) {
+	    String str = "abc", revStr = "";
+	    int strLen = str.length();
+		System.out.println(strLen);
+		for(int i = strLen -1; i >= 0; i--) {
+		  //  System.out.println(str.charAt(i));
+		  revStr = revStr + str.charAt(i);
+		}
+		System.out.println(revStr);
+	}
+}
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Find Missing Number in Array
+public class Main
+{
+	public static void main(String[] args) {
+	   int num[] = {10, 20, 30, 40, 50};
+	   int find =50;
+	   boolean isFound = false;
+	    for(int i = 0; i < num.length; i++){
+	      if(find == num[i]){
+	          isFound = true;
+	      }else{
+	          isFound = false;
+	      }
+	    }
+	     if(isFound == true){
+	          System.out.println("number get us : "+ find);
+	      }else{
+	          System.out.println("num not get us");
+	      }
+	}
+}
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Count Character Frequencies
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Map.Entry;
+
+public class Main
+{
+	public static void main(String[] args) {
+	
+	    String str = "abbc";
+	    Map<Character, Integer> strMap = new HashMap<Character, Integer>();
+	    for(char c: str.toCharArray()) {
+	        strMap.put(c, strMap.getOrDefault(c, 0) + 1);
+	    }
+	    for(Entry<Character, Integer> e: strMap.entrySet()) {
+	        System.out.println(e.getKey() + " : "+ e.getValue());
+	    }
+	}
+}
