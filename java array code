@@ -1,0 +1,43 @@
+// right rotatation of an array in java
+public class Main
+{
+    public static int[] RightRotateArray(int k, int n, int[] arr) {
+        k = k% n;
+        int[] rotetedArr = new int[n];
+        for(int i = 0; i<n; i++) {
+	        rotetedArr[i] = arr[(i+k) % n];
+	    }
+        return rotetedArr; 
+    }
+    
+	public static void main(String[] args) {
+	    int[] arr = {1, 2, 3, 4, 5};
+	    int n = 5, k = 2;
+	    int[] res = RightRotateArray(k, n, arr);
+	    for(int i = 0; i<n; i++) {
+	        System.out.print(res[i]+ "   ");
+	    }
+	}
+}
+--------------------------------------------------------------------------------------------------
+// left rotatation of an array in java
+public class Main
+{
+    public static int[] leftRotateArray(int k, int n, int[] arr) {
+        k = k% n;
+        int[] rotetedArr = new int[n];
+        for(int i = 0; i<n; i++) {
+	        rotetedArr[(i+k) % n] = arr[i];
+	    }
+        return rotetedArr; 
+    }
+
+	public static void main(String[] args) {
+	    int[] arr = {1, 2, 3, 4, 5};
+	    int n = 5, k = 2;
+	    int[] res = leftRotateArray(k, n, arr);
+	    for(int i = 0; i<n; i++) {
+	        System.out.print(res[i]+ "   ");
+	    }
+	}
+}
